@@ -1,6 +1,52 @@
+.tableContainer {
+  text-align: center;
+}
+
 .name {
   text-decoration: underline;
   cursor: pointer;
   border: none;
   background: none;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+}
+
+thead {
+  th {
+    font-weight: 600 !important;
+  }
+}
+
+.sorter {
+  padding: 2rem;
+  text-align: center;
+  select {
+    font-size: 1rem;
+  }
+
+  label {
+    font-weight: 600;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.loader,
+.error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.error {
+  color: red;
 }

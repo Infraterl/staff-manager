@@ -1,0 +1,31 @@
+.card-container {
+  position: relative;
+  max-width: 16rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 2rem auto;
+  background: linear-gradient(#4df8df, #4df0f8);
+  color: #221c18;
+  box-shadow: 0 2px 8px rgba(35, 34, 34, 0.6);
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  label {
+    font-weight: bold;
+  }
+
+  .conflict {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #e58c8c;
+    padding: 0.5rem;
+  }
+  .employee-name {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
