@@ -1,5 +1,7 @@
+import AbsenceTable from "@/components/AbsenceTable";
+
 function App() {
-  return <>Hello World!</>;
+  return <AbsenceTable />;
 }
 
 export default App;
