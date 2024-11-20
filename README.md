@@ -3,13 +3,6 @@
 To run this application you need node installed
 
 - download from [node](https://nodejs.org/en/download/package-manager)
-  Steps
-  Clone the repository.
-  Run npm install to install dependencies.
-  Start the development server with npm start.
-  Testing
-  Implement tests with Jest and React Testing Library.
-  Test API calls and component rendering.
 
 ## Steps
 
