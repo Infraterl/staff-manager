@@ -5,16 +5,16 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import Loader from "@/components/Loader";
+import Loader from "../../atoms/Loader";
 import axios from "axios";
 import useSWR from "swr";
 import { Absence } from "@/types/Absences";
 import styles from "./styles.module.css";
-import Modal from "@/components/Modal";
+import Modal from "../../atoms/Modal";
 import { useRef, useState } from "react";
-import AbsenceCard from "../AbsenceCard";
-import { SorterOptions } from "@/types/SorterOptions";
-import ConflictIndicator from "../ConflictIndicator";
+import AbsenceCard from "../../atoms/AbsenceCard";
+import { SorterOptions } from "../../../types/SorterOptions";
+import ConflictIndicator from "../../atoms/ConflictIndicator";
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
@@ -100,7 +100,7 @@ const AbsenceTable = () => {
           <option value="default" disabled>
             Select an option
           </option>
-          <option value={SorterOptions.DATES}>Dates (Most Recent)</option>
+          <option value={SorterOptions.DATES}>Start dates (Most Recent)</option>
           <option value={SorterOptions.TYPE}>
             Absence Type (Alphabetical Order)
           </option>
@@ -146,7 +146,9 @@ const AbsenceTable = () => {
                   </TableCell>
                   <TableCell align="right">{formattedStartDate}</TableCell>
                   <TableCell align="right">{formattedEndDate}</TableCell>
-                  <TableCell align="right">{absenceType}</TableCell>
+                  <TableCell align="right">
+                    {absenceType.replace(/_/g, " ")}
+                  </TableCell>
                   <TableCell align="right">
                     {approved ? "Approved" : "Pending"}
                   </TableCell>

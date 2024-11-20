@@ -1,7 +1,7 @@
 import axios from "axios";
 import useSWR from "swr";
 import alert from "../../../public/alert.svg";
-import Loader from "@/components/Loader";
+import Loader from "../Loader";
 import styles from "./styles.module.css";
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data);

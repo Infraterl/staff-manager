@@ -1,4 +1,4 @@
-import AbsenceTable from "@/components/AbsenceTable";
+import AbsenceTable from "@/components/organisms/AbsenceTable";
 
 function App() {
   return <AbsenceTable />;

@@ -19,7 +19,7 @@ function AbsenceCard({ absence }: AbsenceCardProps) {
       <div>
         <p>
           <label htmlFor="start-date">Start date:</label>{" "}
-          <span id="start-date">{formattedStartDate || "-"}</span>
+          <span id="start-date">{startDate ? formattedStartDate : "-"}</span>
         </p>
         <p>
           <label htmlFor="end-date">End date:</label>{" "}
