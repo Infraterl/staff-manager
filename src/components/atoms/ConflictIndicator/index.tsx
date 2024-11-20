@@ -1,6 +1,6 @@
 import axios from "axios";
 import useSWR from "swr";
-import alert from "../../../public/alert.svg";
+import alert from "../../../../public/alert.svg";
 import Loader from "../Loader";
 import styles from "./styles.module.css";
 
