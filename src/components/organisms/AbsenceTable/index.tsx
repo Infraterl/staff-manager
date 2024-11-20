@@ -90,7 +90,7 @@ const AbsenceTable = () => {
     <div className={styles.tableContainer}>
       <h1>Absence Table</h1>
       <div className={styles.sorter}>
-        <label htmlFor="sort-by">Sort by:</label>
+        <label htmlFor="sort-by">Sort by: </label>
         <select
           name="sort-by"
           id="sort-by"
