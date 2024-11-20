@@ -14,6 +14,7 @@ import Modal from "@/components/Modal";
 import { useRef, useState } from "react";
 import AbsenceCard from "../AbsenceCard";
 import { SorterOptions } from "@/types/SorterOptions";
+import ConflictIndicator from "../ConflictIndicator";
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
@@ -115,11 +116,13 @@ const AbsenceTable = () => {
               <TableCell align="right">End date</TableCell>
               <TableCell align="right">Absence type</TableCell>
               <TableCell align="right">Status</TableCell>
+              <TableCell align="right">Conflicts</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {finalData.map((row: Absence) => {
-              const { startDate, days, employee, absenceType, approved } = row;
+              const { startDate, days, employee, absenceType, approved, id } =
+                row;
               const formattedStartDate = new Date(startDate).toLocaleDateString(
                 "en-GB"
               );
@@ -146,6 +149,9 @@ const AbsenceTable = () => {
                   <TableCell align="right">{absenceType}</TableCell>
                   <TableCell align="right">
                     {approved ? "Approved" : "Pending"}
+                  </TableCell>
+                  <TableCell align="right">
+                    <ConflictIndicator id={id} />
                   </TableCell>
                 </TableRow>
               );
